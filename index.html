@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <form onsubmit="return submitForm(this)" target="#">
+       <div class="form-element">
+           <span>Name</span>
+           <input type="text" id="name" name="entry.444468345" placeholder="Name" required>
+       </div>
+       <br>
+       <div class="form-element">
+           <span>Email Address</span>
+           <input type="email" id="email" name="entry.209204928" placeholder="Email" required>
+       </div><br>
+       <div class="form-element">
+           <span>Subject</span>
+           <select name="entry.224847141" id="subject">
+               <option value="Bio">Bio</option>
+               <option value="Chem">Chem</option>
+               <option value="CSCI">CSCI</option>
+               <option value="Engl">Engl</option>
+               <option value="Math">Math</option>
+               <option value="Phys">Phys</option>
+               <option value="Other">Other</option>
+           </select>
+       </div><br>
+       <div class="form-element">
+           <span>Date</span>
+           <input type="date" name="entry.1257566662" id="myDate" min="" required>
+       </div><br>
+       <div class="form-element">
+           <span>Time</span>
+           <input type="time" name="entry.532309821"  min="" required>
+       </div><br>
+       
+       <button type="submit">Submit</button>
+    </form>
+    <form action="" id="upload">
+        <div class="form-element">
+            <span>Study Guide</span>
+            <input type="file" name="file">
+        </div>
+        <input id="submit" type="submit">
+    </form>
+    <script type="text/javascript" src="app.js"></script>
+</body>
+</html>
