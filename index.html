@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScmvHy1TCDleTBkbkiWsG4YFqkOMKCApVBlI53YxbnPneIYKQ/formResponse">
+       <div class="form-element">
+           <span>Name</span>
+           <input type="text" name="entry.444468345" placeholder="Name">
+       </div>
+       <br>
+       <div class="form-element">
+           <span>Email Address</span>
+           <input type="email" name="entry.209204928" placeholder="Email">
+       </div><br>
+       <div class="form-element">
+           <span>Subject</span>
+           <select name="entry.224847141" id="">
+               <option value="Bio">Bio</option>
+               <option value="Chem">Chem</option>
+               <option value="CSCI">CSCI</option>
+               <option value="Engl">Engl</option>
+               <option value="Math">Math</option>
+               <option value="Phys">Phys</option>
+               <option value="Other">Other</option>
+           </select>
+       </div><br>
+       <div class="form-element">
+           <span>Date</span>
+           <input type="date" name="entry.1257566662" id="myDate" min="">
+       </div><br>
+       <div class="form-element">
+           <span>Time</span>
+           <input type="time" name="entry.532309821"  min="">
+       </div><br>
+       <div class="form-element">
+           <span>Study Guide</span>
+           <input type="file">
+       </div>
+       <button type="submit">Submit</button>
+    </form>
+    <script>
+        function todayDate() {
+            var today = new Date(); // get the current date
+            today.setDate(today.getDay() + 3)
+            console.log(today)
+            var dd = today.getDate(); //get the day from today.
+            var mm = today.getMonth()+1; //get the month from today +1 because january is 0!
+            var yyyy = today.getFullYear(); //get the year from today
+            //if day is below 10, add a zero before (ex: 9 -> 09)
+            if(dd<10) {
+                dd='0'+dd
+            }
+            //like the day, do the same to month (3->03)
+            if(mm<10) {
+                mm='0'+mm
+            }
+            //finally join yyyy mm and dd with a "-" between then
+            return yyyy+'-'+mm+'-'+dd; 
+        }
+        $(document).ready(function(){
+            $('#myDate').attr('min', todayDate());
+        });
+    </script>
+</body>
+</html>
+
+<!-- <div jsname="o6bZLc">
+    <input type="hidden" name="entry.1257566662_year" value="2021">
+    <input type="hidden" name="entry.1257566662_month" value="03">
+    <input type="hidden" name="entry.1257566662_day" value="05">
+    <input type="hidden" name="entry.209204928" value="email">
+    <input type="hidden" name="entry.224847141" value="Bio">
+    <input type="hidden" name="entry.444468345" value="andrew">
+    <input type="hidden" name="entry.532309821_hour" value="11">
+    <input type="hidden" name="entry.532309821_minute" value="00">
+</div> -->
