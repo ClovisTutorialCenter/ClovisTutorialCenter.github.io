@@ -7,23 +7,27 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- modify this form HTML and place wherever you want your form -->
 
+<!-- modify this form HTML and place wherever you want your form -->
 <form
-action="https://formspree.io/f/mpzovjwk"
-method="POST"
-enctype="multipart/form-data"
+  action="https://formspree.io/f/mpzovjwk"
+  method="POST"
+  enctype="multipart/form-data"
 >
-<label>
-  Your email:
-  <input type="email" name="_replyto">
-</label>
-<label>
-  Your file:
-  <input type="file" name="upload">
-</label>
-
-<button type="submit">Send</button>
+  <label>
+    Your email:
+    <input type="email" name="_replyto">
+  </label>
+  <label>
+    Your file:
+    <input type="file" name="upload">
+  </label>
+  <button type="submit">Send</button>
 </form>
+  <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
+  <script>
+    window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
+    formbutton("create", {action: "https://formspree.io/f/mpzovjwk"})
+  </script>
 </body>
 </html>
